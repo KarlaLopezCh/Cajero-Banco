@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="main.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <div class="scotiabank">
+    <div class="pantalla1 pantallas" id="pantallaUno">
+        <img src="IMG/descarga.png" class="isotipo"/>
+        <h1 class="cajero">Te damos la bienvenida a Scotiabank</h1>
+        <p>Presione el botón para empezar.</p>
+        <button onclick="irA('pantallaDos')" class="blanco">Iniciar</button>
+    </div>
+
+    <div class="pantalla2 pantallas" id="pantallaDos">
+        <img src="IMG/logo.svg" class="logo"/>
+        <h1 class="sesion">Ingrese su clave de cajero</h1>
+        <p>Y presione el botón para empezar a usar el cajero</p>
+        <input type="text" class="clavecajero" placeholder="Clave cajero" id="clave" required/>
+        <br/>
+        <button onclick="irA('pantallaTres')" class="rojo">Ingresar</button>
+       
+    </div>
+
+    <div class="pantalla3 pantallas" id="pantallaTres">
+        <div class="header">
+            <img src="IMG/logo negativo.svg" class="logo" />
+            <button onclick="irA('pantallaUno')" class="salir">Salir</button>
+
+        </div>
+        <h1>Bienvenida, María. ¿Qué deseas hacer?</h1>
+  
+       
+               <div class="operaciones">
+              
+                <section onclick="irA('pantallaCuatro')"class="saldo"><h2>Consultar Saldo</h2>
+                <img src="IMG/money-svgrepo-com (1).svg" class="iconos"/>
+                </section>
+                <section onclick="irA('pantallaCinco')" class="ingresar"><h2>Ingresar Monto</h2>
+                    <img src="IMG/piggy-bank-svgrepo-com.svg" class="iconos"/>
+                </section>
+                <section onclick="irA('pantallaSeis')" class="retirar"><h2>Retirar Monto</h2>
+                <img src="IMG/hand-money-cash-hold-svgrepo-com.svg" class="iconos"/>
+            </section>
+
+            </div>
+            <div class="operaciones2">
+               <section class="transferir"> <h3>Transferir efectivo</h3></section> 
+               <section class="transferir"> <h3>Cambiar clave</h3></section> 
+            </div>
+    </div>
+        
+    <div class="pantalla4 pantallas" id="pantallaCuatro">
+        <div class="header">
+            <img src="IMG/logo negativo.svg" class="logo" />
+            <button onclick="irA('pantallaTres')" class="salir">Regresar</button>
+
+        </div>
+        <h1>Saldo disponible:</h1>
+        <p class="cuenta">Ahorro soles: *******1234</p>
+        <span class="soles">S/ </span><span class="monto"> 1,000.00</span>
+        </br>
+         </br>
+          </br>
+           </br>
+    </div>
+    
+    <div class="pantalla5 pantallas" id="pantallaCinco">
+        <div class="header">
+            <img src="IMG/logo negativo.svg" class="logo" />
+            <button onclick="irA('pantallaTres')" class="salir">Regresar</button>
+
+        </div>
+        <h1>Ingresa el monto a depositar</h1>
+        <div class="campo-monto"><span class="soles">S/</span>
+        <input type="text"  placeholder="0.00">
+        </div>
+        <button onclick="irA('pantallaCuatro')" class="rojo">Depositar</button>
+       
+        </div>
+
+    <div class="pantalla6 pantallas" id="pantallaSeis">
+        <div class="header">
+            <img src="IMG/logo negativo.svg" class="logo" />
+            <button onclick="irA('pantallaTres')" class="salir">Regresar</button>
+
+        </div>
+        <h1>Elige el monto para retirar</h1>
+        <div class="montos">
+              
+                <section class="retiro-monto"><h2>S/ 20</h2>
+                
+                </section>
+                <section class="retiro-monto"><h2>S/ 50</h2>
+                    
+                </section>
+                <section class="retiro-monto"><h2>S/ 100</h2>
+                </section>
+                <section class="retiro-monto"><h2>S/ 500</h2>
+                </section>
+                <section class="retiro-monto"><h2>S/ 1000</h2>
+                </section>
+                <section onclick="irA('pantallaSiete')" class="retiro-monto"><h2>Otro monto</h2>
+                </section>
+
+            </div>
+    </div>
+
+    <div class="pantalla7 pantallas" id="pantallaSiete">
+        <div class="header">
+            <img src="IMG/logo negativo.svg" class="logo" />
+            <button onclick="irA('pantallaSeis')" class="salir">Regresar</button>
+
+        </div>
+        <h1>Ingresa el monto a retirar</h1>
+        <div class="campo-monto"><span class="soles">S/</span>
+  <input type="text"  placeholder="0.00">
+        </div>
+        <button onclick="irA('pantallaCuatro')" class="rojo">Retirar</button>
+       
+    </div>
+    </div>
+
+</div>
+</body>
+</html>
