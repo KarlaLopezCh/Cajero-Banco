@@ -41,7 +41,15 @@ p{
     text-align: center;
     color: var(--color-white);
     position: absolute;
-   
+}
+
+.mensajeOperacion{
+    padding-top: 33px;
+    opacity: 0;
+}
+.mensajeOperacion.error{
+    padding-top: 33px;
+    opacity: 1;
 }
 
 .pantalla1 img{
@@ -92,7 +100,7 @@ a{
     padding: 15px 0px 15px 0px;
 }
 
-.pantalla3, .pantalla4, .pantalla5, .pantalla6, .pantalla7 {
+.pantalla3, .pantalla4, .pantalla5, .pantalla6, .pantalla7{
     width: 1080px;
     height: 720px;
     margin-left: auto;
@@ -100,6 +108,71 @@ a{
     background-color: var(--color-white);
     text-align: center;
     display: none;   
+}
+
+.pantalla-carga{
+    width: 1080px;
+    height: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--color-white);
+    text-align: center;
+    display: none;   
+}
+
+.pantalla-carga h1{
+    padding-top: 180px;
+    font-weight: 350;
+}
+
+.pantalla-vali{
+    width: 1080px;
+    height: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--color-white);
+    text-align: center;
+    display: none;
+     
+}
+
+.pantalla-vali h1{
+        padding-top: 180px;
+    font-weight: 650;
+}
+
+.pantalla-vali img{
+    width: 180px;
+    margin-top: 20px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg); 
+    }
+    100% {
+        transform: rotate(360deg); 
+    }
+}
+
+
+.loader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* height: 100%;  */
+    width: 100%;
+    color: var(--color-red);
+    margin-top: 70px;
+}
+
+.loader {
+    border: 8px solid #f3f3f3; 
+    border-top: 8px solid var(--color-red); 
+    border-radius: 50%; 
+    width: 90px;
+    height: 90px;
+        animation: spin 1s linear infinite; 
 }
 
 .header{

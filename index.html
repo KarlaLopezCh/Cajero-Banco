@@ -27,7 +27,8 @@
         <p>Y presione el botón para empezar a usar el cajero</p>
         <input type="text" class="clavecajero" placeholder="Clave cajero" id="clave" required/>
         <br/>
-        <button onclick="irA('pantallaTres')" class="rojo">Ingresar</button>
+        <button onclick="validarClave()" class="rojo">Ingresar</button>
+        <p id="mensajeClave" class="mensajeOperacion">Clave incorrecta. Vuelva a intentarlo.</p>
        
     </div>
 
@@ -67,7 +68,7 @@
         </div>
         <h1>Saldo disponible:</h1>
         <p class="cuenta">Ahorro soles: *******1234</p>
-        <span class="soles">S/ </span><span class="monto"> 1,000.00</span>
+        <span class="soles">S/ </span><span class="monto" id="saldoMostrar"> </span>
         </br>
          </br>
           </br>
@@ -82,9 +83,9 @@
         </div>
         <h1>Ingresa el monto a depositar</h1>
         <div class="campo-monto"><span class="soles">S/</span>
-        <input type="text"  placeholder="0.00">
+        <input type="text"  placeholder="0.00" id="ingresarMonto">
         </div>
-        <button onclick="irA('pantallaCuatro')" class="rojo">Depositar</button>
+        <button onclick="realizarDeposito()" class="rojo">Depositar</button>
        
         </div>
 
@@ -97,17 +98,17 @@
         <h1>Elige el monto para retirar</h1>
         <div class="montos">
               
-                <section class="retiro-monto"><h2>S/ 20</h2>
+                <section onclick="realizarRetiro20()" class="retiro-monto"><h2>S/ 20</h2>
                 
                 </section>
-                <section class="retiro-monto"><h2>S/ 50</h2>
+                <section onclick="realizarRetiro50()" class="retiro-monto"><h2>S/ 50</h2>
                     
                 </section>
-                <section class="retiro-monto"><h2>S/ 100</h2>
+                <section onclick="realizarRetiro100()" class="retiro-monto"><h2>S/ 100</h2>
                 </section>
-                <section class="retiro-monto"><h2>S/ 500</h2>
+                <section onclick="realizarRetiro500()" class="retiro-monto"><h2>S/ 500</h2>
                 </section>
-                <section class="retiro-monto"><h2>S/ 1000</h2>
+                <section onclick="realizarRetiro1000()" class="retiro-monto"><h2>S/ 1000</h2>
                 </section>
                 <section onclick="irA('pantallaSiete')" class="retiro-monto"><h2>Otro monto</h2>
                 </section>
@@ -123,11 +124,33 @@
         </div>
         <h1>Ingresa el monto a retirar</h1>
         <div class="campo-monto"><span class="soles">S/</span>
-  <input type="text"  placeholder="0.00">
+  <input type="text"  placeholder="0.00" id="retirarMonto">
         </div>
-        <button onclick="irA('pantallaCuatro')" class="rojo">Retirar</button>
+        <button onclick="realizarRetiro()" class="rojo">Retirar</button>
        
     </div>
+
+    <div class="pantalla-carga pantallas" id="pantallaCarga">
+        <h1>Procesando movimiento...</h1>
+        <div class="loader-container">
+       <div class="loader"></div>
+</div> 
+</div>
+
+<div class="pantalla-vali pantallas" id="pantallaValidacion1">
+        <h1 id="validacionTitulo1">Depósito realizado con éxito.</h1>
+        <img src="IMG/check-circle-svgrepo-com.svg"/>
+       
+
+    </div>
+
+    <div class="pantalla-vali pantallas" id="pantallaValidacion2">
+        <h1 id="validacionTitulo2">Retiro realizado con éxito.</h1>
+        <img src="IMG/check-circle-svgrepo-com.svg"/>
+       
+
+    </div>
+
     </div>
 
 </div>
